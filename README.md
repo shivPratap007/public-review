@@ -7,11 +7,7 @@ This project is a simple public review application built with React, TypeScript,
 - [Features](#features)
 - [Demo](#demo)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
