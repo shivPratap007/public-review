@@ -1,8 +1,11 @@
-import { useFeedBackItemContext } from "./Hooks";
+import useStore from "../store/store";
 
 export default function HashtagList() {
-  const{companies,handleSelectedCompany}=useFeedBackItemContext()
+  const companies = useStore((state) => state.getCompanyList());
+  const handleSelectedCompany = useStore((state) => state.handleSelectedCompany);
+
   return (
+
     <ul className="hashtags">
       <li >
           <button onClick={()=> handleSelectedCompany("All")} >#All</button>

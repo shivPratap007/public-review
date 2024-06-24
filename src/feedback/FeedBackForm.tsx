@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { MAX_CHARACTERS } from "../lib/constants";
-export default function FeedBackForm({
-  handleAddToList,
-}: {
-  handleAddToList: (text: string) => void;
-}) {
+import useStore from "../store/store";
+export default function FeedBackForm() {
+
+  const handleAddToList = useStore((state) => state.handleAddToList);
+
   const [text, setText] = useState<string>("");
 
   const [hashTagCheckTrue, setHashTagCheckTrue] = useState<boolean>(false);

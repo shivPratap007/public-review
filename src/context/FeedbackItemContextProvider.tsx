@@ -1,4 +1,4 @@
-import { createContext,  useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { FeedBackItemInterface } from "../lib/types";
 
 export type TFeedBackItemContext = {
@@ -47,17 +47,16 @@ export default function FeedbackItemContextProvider({
     setFeedBackItems((prev) => [...prev, newItem]);
   }
 
-  async function fetchReviews() {
-    const response = await fetch(
-      "https://bytegrad.com/course-assets/projects/corpcomment/api/feedbacks"
-    );
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  }
-
   useEffect(() => {
+    async function fetchReviews() {
+      const response = await fetch(
+        "https://bytegrad.com/course-assets/projects/corpcomment/api/feedbacks"
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    }
     setIsLoading(true);
     setErrorMessage("");
     fetchReviews()
@@ -102,5 +101,3 @@ export default function FeedbackItemContextProvider({
     </FeedBackItemContext.Provider>
   );
 }
-
-
