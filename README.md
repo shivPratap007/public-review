@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+# Public Review App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple public review application built with React, TypeScript, and Vite. Users can submit reviews by writing a review text containing a hashtag for the topic (e.g., `#TopicName`). The app displays a list of all submitted reviews and allows users to filter reviews by topics.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Demo](#demo)
+- [Installation](#installation)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Submit reviews with hashtags for topics.
+- Display a list of all submitted reviews.
+- Filter reviews by topics.
+- Load initial reviews from an API.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Demo
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Check out the live demo of the app [here](#).
+
+## Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/your-username/public-review-app.git
+   cd public-review-app
